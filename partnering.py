@@ -13,10 +13,10 @@ class Role(enum.Enum):
     def __invert__(self):
         """Return the opposite role.
 
-        >>> ~Role.gent is Role.lady
-        True
-        >>> ~Role.lady is Role.gent
-        True
+        >>> print(~Role.gent)
+        Role.lady
+        >>> print(~Role.lady)
+        Role.gent
         """
         return Role(-self.value)
 
