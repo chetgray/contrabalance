@@ -10,12 +10,12 @@ class Role(enum.Enum):
     gent = -1
     lady = 1
 
-    def __neg__(self):
+    def __invert__(self):
         """Return the opposite role.
 
-        >>> -Role.gent is Role.lady
+        >>> ~Role.gent is Role.lady
         True
-        >>> -Role.lady is Role.gent
+        >>> ~Role.lady is Role.gent
         True
         """
         return Role(-self.value)
